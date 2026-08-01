@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.string.xyz/reference/post_transaction
+format: http-status
+description: >-
+  API-level error catalog for the String API. Derived from the documented HTTP
+  response codes on the transaction/quote and management endpoints (the public
+  ReadMe reference lists 200/400/401/403/500 on the transact operation). No
+  machine-readable OpenAPI is publicly retrievable, and String does not publish
+  an RFC 9457 problem+json envelope, so these are captured as HTTP status
+  classes rather than typed problem URIs. Payment-processor decline codes are
+  handled by String as merchant of record and are not published in the
+  developer docs, so no decline-codes artifact is emitted (no fabrication).
+problems:
+- status: 400
+  title: Bad Request
+  meaning: The request was malformed or missing required fields (e.g. an invalid quote or payment payload).
+  source_operation: post_transaction
+- status: 401
+  title: Unauthorized
+  meaning: Missing or invalid authentication — a bad/absent X-Api-Key or an unauthenticated player session.
+  source_operation: post_transaction
+- status: 403
+  title: Forbidden
+  meaning: Authenticated but not permitted for this resource/action (e.g. wrong key class or organization scope).
+  source_operation: post_transaction
+- status: 404
+  title: Not Found
+  meaning: The referenced resource (contract, platform, member, user, invite) does not exist.
+  source_operation: get_contracts-id
+- status: 500
+  title: Internal Server Error
+  meaning: An unexpected server-side failure while processing the request/transaction.
+  source_operation: post_transaction

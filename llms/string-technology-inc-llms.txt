@@ -1,0 +1,92 @@
+# String Technology Inc Documentation
+
+> Fiat interoperability for Web3 gaming. Integrate credit card and bank payments natively throughout your game environment.
+
+## Guides
+- [Introduction](https://docs.string.xyz/docs/introduction.md)
+- [Why Use String?](https://docs.string.xyz/docs/why-use-string.md)
+- [Our Products](https://docs.string.xyz/docs/our-products.md)
+- [Getting Started](https://docs.string.xyz/docs/getting-started.md)
+- [Overview](https://docs.string.xyz/docs/overview.md)
+- [Players](https://docs.string.xyz/docs/players.md)
+- [Basic Authentication](https://docs.string.xyz/docs/basic-auth.md)
+- [Integrated Authentication](https://docs.string.xyz/docs/integrated-auth.md)
+- [Returning Players](https://docs.string.xyz/docs/returning-players.md)
+- [Auth UX Diagrams](https://docs.string.xyz/docs/diagrams.md): Below are some diagrams to showing how the different Authentication Methods work.
+- [Transactions](https://docs.string.xyz/docs/transact.md)
+- [How it Works](https://docs.string.xyz/docs/checkout-how-it-works.md): String Checkout Overview
+- [Implementation Guide](https://docs.string.xyz/docs/checkout-implementation-guide.md): Integrate String Checkout into your Game
+- [Setup](https://docs.string.xyz/docs/checkout-setup.md): There are two different methods to choose from when setting up your String Checkout integration.
+- [Integration Steps](https://docs.string.xyz/docs/checkout-integration-steps.md): Once you have set up your environment, follow the steps below to integrate String Checkout into your game.
+- [Examples](https://docs.string.xyz/docs/checkout-examples.md): Here are some extra resources to help you better understand how to implement String Checkout.
+- [Web Payload Guide](https://docs.string.xyz/docs/checkout-web-payload-guide.md)
+- [How it Works](https://docs.string.xyz/docs/unity-how-it-works.md): String Unity Overview
+- [Implementation Guide](https://docs.string.xyz/docs/unity-implementation-guide.md): Build your Unity game with our SDK.
+- [Setup](https://docs.string.xyz/docs/unity-setup.md)
+- [Integration Steps](https://docs.string.xyz/docs/unity-integration-steps.md)
+- [Examples](https://docs.string.xyz/docs/unity-examples.md)
+- [Appendices](https://docs.string.xyz/docs/unity-appendices.md)
+- [How It Works](https://docs.string.xyz/docs/direct-how-it-works.md): The best way to create an immersive Web3 browser game.
+- [Implementation Guide](https://docs.string.xyz/docs/direct-implementation-guide.md): Build your game with our custom web SDK
+- [Setup](https://docs.string.xyz/docs/direct-setup.md)
+- [Integration Steps](https://docs.string.xyz/docs/direct-integration-steps.md)
+- [Appendices](https://docs.string.xyz/docs/direct-appendices.md)
+- [Style](https://docs.string.xyz/docs/direct-style.md): String Direct CSS Styling
+- [General FAQs](https://docs.string.xyz/docs/general-faqs.md)
+- [String Checkout FAQs](https://docs.string.xyz/docs/sdk-faqs.md)
+
+## API Reference
+- [Get all API keys](https://docs.string.xyz/reference/get_apikeys.md): Get all API keys
+- [Create API key](https://docs.string.xyz/reference/post_apikeys.md): Create an API key
+- [Delete API key](https://docs.string.xyz/reference/delete_apikeys-id.md): Delete API key by ID
+- [Get API key](https://docs.string.xyz/reference/get_apikeys-id.md): Get API key by ID
+- [Update API key](https://docs.string.xyz/reference/put_apikeys-id.md): Update API key by ID
+- [Get all contracts](https://docs.string.xyz/reference/get_contracts.md)
+- [Create a new contract](https://docs.string.xyz/reference/post_contracts.md)
+- [Get a specific contract](https://docs.string.xyz/reference/get_contracts-id.md)
+- [Update a contract](https://docs.string.xyz/reference/patch_contracts-id.md)
+- [Deactivate a contract](https://docs.string.xyz/reference/patch_contracts-id-deactivate.md)
+- [Reactivate a contract](https://docs.string.xyz/reference/patch_contracts-id-reactivate.md)
+- [List invites](https://docs.string.xyz/reference/get_invites.md)
+- [Send an invite](https://docs.string.xyz/reference/post_invites.md)
+- [Revoke an invite](https://docs.string.xyz/reference/delete_invites-id.md)
+- [Get an invite](https://docs.string.xyz/reference/get_invites-id.md)
+- [Update an invite](https://docs.string.xyz/reference/patch_invites-id.md)
+- [Accept an invite](https://docs.string.xyz/reference/post_invites-id.md)
+- [Resend an invite](https://docs.string.xyz/reference/post_invites-id-resend.md)
+- [Login](https://docs.string.xyz/reference/post_login.md)
+- [Logout](https://docs.string.xyz/reference/post_login-logout.md)
+- [Refresh token](https://docs.string.xyz/reference/post_login-refresh.md)
+- [Get all members](https://docs.string.xyz/reference/get_members.md)
+- [Update self](https://docs.string.xyz/reference/patch_members.md)
+- [Get a member by ID](https://docs.string.xyz/reference/get_members-id.md)
+- [Update member](https://docs.string.xyz/reference/patch_members-id.md)
+- [Deactivate member](https://docs.string.xyz/reference/patch_members-id-deactivate.md)
+- [Reactivate member](https://docs.string.xyz/reference/patch_members-id-reactivate.md)
+- [Transfer ownership](https://docs.string.xyz/reference/patch_members-id-transferowner.md)
+- [Send password reset email](https://docs.string.xyz/reference/get_members-password-reset.md)
+- [Reset password](https://docs.string.xyz/reference/post_members-password-reset.md)
+- [Get all networks](https://docs.string.xyz/reference/get_networks.md)
+- [Get organization](https://docs.string.xyz/reference/get_organizations.md)
+- [Update organization](https://docs.string.xyz/reference/patch_organizations.md)
+- [Create organization](https://docs.string.xyz/reference/post_organizations.md)
+- [Get all platforms](https://docs.string.xyz/reference/get_platforms.md)
+- [Create platform](https://docs.string.xyz/reference/post_platforms.md)
+- [Get platform](https://docs.string.xyz/reference/get_platforms-id.md)
+- [Update platform](https://docs.string.xyz/reference/patch_platforms-id.md)
+- [Deactivate platform](https://docs.string.xyz/reference/patch_platforms-id-deactivate.md)
+- [Reactivate platform](https://docs.string.xyz/reference/patch_platforms-id-reactivate.md)
+- [Get all saved cards](https://docs.string.xyz/reference/get_cards.md): Get all saved cards
+- [Request To Sign](https://docs.string.xyz/reference/get_login.md): RequestToSign sends the user a nonce payload to be signed for authentication/login purposes. User must provide a valid wallet address
+- [Logout](https://docs.string.xyz/reference/post_login-logout-1.md): Logout of the application, invalidating the auth cookies
+- [Refresh Token](https://docs.string.xyz/reference/post_login-refresh-1.md): Refresh Token
+- [Login](https://docs.string.xyz/reference/post_login-sign.md): Login receives the signed noncePayload and verifies the signature to authenticate the user.
+- [Quote](https://docs.string.xyz/reference/post_quote.md): Quote returns the estimated cost of a transaction
+- [Transact](https://docs.string.xyz/reference/post_transaction.md): Transact executes a transaction
+- [Create user](https://docs.string.xyz/reference/post_users.md): Create user
+- [Update user](https://docs.string.xyz/reference/patch_users-id.md): Update user
+- [Pre validate email](https://docs.string.xyz/reference/post_users-id-email-pre-validate.md): Pre validate email allows an organization to pre validate an email before the user signs up
+- [Get user status](https://docs.string.xyz/reference/get_users-id-status.md): Get user status
+- [Verify email](https://docs.string.xyz/reference/get_users-id-verify-email.md): Verify email sends an email with a link, the user must click on the link for the email to be verified. The link sent is handled by (verification.VerifyEmail) handler
+- [Get user persona account id](https://docs.string.xyz/reference/get_users-persona-account-id.md): Get user persona account id
+- [Verify](https://docs.string.xyz/reference/get_verification.md): Verify receives payload from an email link sent previsouly.

@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.string.xyz/docs/transact
+description: >-
+  Cross-cutting request/response conventions for the String API, captured from
+  the docs and the documented endpoint surface. String is a REST/JSON API at
+  string-api.xyz. The marquee flow is quote -> transact: a game requests a quote
+  (estimated cost of a transaction), collects/submits payment info, then
+  executes the transaction, with String acting as merchant of record. Idempotency
+  is not documented in the public reference, so no Idempotency pointer is emitted
+  (no fabrication). Cross-links: authentication/, errors/, lifecycle/, data-model/.
+base_url: https://string-api.xyz
+api_style: REST over HTTPS, JSON request/response
+authentication:
+  scheme: X-Api-Key header (public + secret keys) and EIP-4361 wallet-signature player login
+  detail: authentication/string-technology-inc-authentication.yml
+transaction_flow:
+  steps:
+  - Login the player (wallet-signature or integrated auth)
+  - Request a quote — POST /quote returns the estimated cost of a transaction
+  - Collect and submit payment information
+  - Execute the transaction — POST /transaction (optional saveCard query flag to save the card)
+  receipt: String emails a receipt to the player once the transaction executes
+  docs: https://docs.string.xyz/docs/transact
+idempotency:
+  supported: unknown
+  note: Not documented in the public API reference; no Idempotency-Key contract published.
+pagination:
+  style: unknown
+  note: List endpoints (get_apikeys, get_contracts, get_members, get_platforms, get_invites) exist but the pagination contract is not documented in the public reference.
+error_envelope:
+  style: HTTP status codes (400/401/403/404/500); no RFC 9457 problem+json documented
+  detail: errors/string-technology-inc-problem-types.yml
+versioning:
+  scheme: uri-path / docs-version (docs served under /v2.0.1-alpha)
+  detail: lifecycle/string-technology-inc-lifecycle.yml
+environments:
+  test: sandbox (developer dashboard at sandbox.string.xyz; sandbox-issued API keys)
+  live: production (requires upgrade from sandbox)
+  detail: sandbox/string-technology-inc-sandbox.yml
+smart_contracts:
+  note: For NFT purchases the game must register its smart contract and functions before quoting/transacting; the transaction type (NFT purchase vs swap vs transfer) is determined by the registered contract.
+  docs: https://docs.string.xyz/docs/getting-started

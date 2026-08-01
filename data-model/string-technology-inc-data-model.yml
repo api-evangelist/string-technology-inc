@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.string.xyz/llms.txt
+docs: https://docs.string.xyz/reference/get_apikeys
+description: >-
+  Entity-relationship graph for the String platform, derived from the documented
+  API resource surface (the ReadMe reference / llms.txt endpoint list). No
+  machine-readable OpenAPI is publicly retrievable, so relationships are inferred
+  from the documented resource collections and their nesting rather than from
+  schema $ref links. id-prefixes are not published in the docs and are left null.
+notation: >-
+  relationships use has_one / has_many / belongs_to with the reference field
+  name where documented; direction is from the entity that owns the reference.
+entities:
+- {name: Organization, domain: account, description: The top-level account that owns games, members, API keys, and invites.}
+- {name: Member, domain: account, description: A user account within an organization (dashboard/admin), with roles and ownership transfer.}
+- {name: Invite, domain: account, description: An invitation for a new member to join an organization.}
+- {name: Platform, domain: account, description: A game registered under an organization; API keys and contracts are associated with a platform.}
+- {name: ApiKey, domain: auth, description: A public or secret key authenticating a game/organization to the String API.}
+- {name: Contract, domain: web3, description: A registered smart contract (and its functions) for a game, determining NFT transaction types.}
+- {name: Network, domain: web3, description: A supported blockchain network.}
+- {name: User, domain: player, description: A player who transacts; authenticates via wallet signature; owns saved cards.}
+- {name: Card, domain: player, description: A saved payment card belonging to a user/player.}
+- {name: Quote, domain: transaction, description: An estimated cost of a prospective transaction.}
+- {name: Transaction, domain: transaction, description: An executed asset exchange (fiat on/off ramp, NFT purchase, cross-chain) between String and the player.}
+relationships:
+- {from: Organization, to: Member, kind: has_many, via: organization}
+- {from: Organization, to: Invite, kind: has_many, via: organization}
+- {from: Organization, to: Platform, kind: has_many, via: organization}
+- {from: Organization, to: ApiKey, kind: has_many, via: organization}
+- {from: Platform, to: Organization, kind: belongs_to, via: organization}
+- {from: Platform, to: Contract, kind: has_many, via: platform}
+- {from: Contract, to: Platform, kind: belongs_to, via: platform}
+- {from: ApiKey, to: Platform, kind: belongs_to, via: platform}
+- {from: Member, to: Organization, kind: belongs_to, via: organization}
+- {from: Invite, to: Organization, kind: belongs_to, via: organization}
+- {from: User, to: Card, kind: has_many, via: user}
+- {from: Card, to: User, kind: belongs_to, via: user}
+- {from: Transaction, to: Quote, kind: belongs_to, via: quote}
+- {from: Transaction, to: User, kind: belongs_to, via: user}
+- {from: Transaction, to: Contract, kind: belongs_to, via: contract}
+- {from: Quote, to: Network, kind: belongs_to, via: network}

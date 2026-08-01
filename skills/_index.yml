@@ -1,0 +1,13 @@
+generated: '2026-07-21'
+method: generated
+source: https://docs.string.xyz/docs/transact
+description: >-
+  Packaged Agent Skills for the String API, generated from the documented
+  operation surface (docs.string.xyz reference / llms.txt). Grounded in real
+  documented endpoints; no OpenAPI file is publicly retrievable, so operations
+  are referenced by their documented method+path and ReadMe operation slug.
+skills:
+- file: string-technology-inc-quote-and-transact.md
+  name: Quote and execute a String transaction
+  api: https://string-api.xyz
+  operations: [get_login, post_login-sign, post_quote, post_transaction]

@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.string.xyz
+description: >-
+  Versioning and lifecycle posture for the String API, captured from the docs.
+  The documentation is served under a version segment (v2.0.1-alpha), indicating
+  an early/alpha API generation. No public deprecation policy, SLA, or status
+  page was found on the developer site, so no StatusPage or Deprecation pointer
+  is emitted (no fabrication).
+versioning:
+  scheme: uri-path / docs-version
+  current: v2.0.1-alpha
+  docs: https://docs.string.xyz
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+sla:
+  url: null
+status_page: null
+notes: >-
+  Alpha-generation API. Access is gated through the sandbox developer dashboard;
+  production access requires an upgrade from sandbox mode.

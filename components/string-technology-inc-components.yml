@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.string.xyz/docs/our-products
+description: >-
+  String's client-side / embeddable payment surfaces for Web3 games — distinct
+  from the server/client SDKs catalogued in packages/. String ships three
+  integration products that render the payment experience inside a game, each
+  wrapping the String API into a few calls.
+docs:
+- https://docs.string.xyz/docs/our-products
+- https://docs.string.xyz/docs/checkout-how-it-works
+- https://docs.string.xyz/docs/unity-how-it-works
+- https://docs.string.xyz/docs/direct-how-it-works
+families:
+  checkout:
+    description: String Checkout — a drop-in, hosted payment app (rendered as an iframe) that handles the full quote/payment/transact flow with minimal integration.
+    components:
+    - {name: String Checkout, description: Prebuilt payment surface embedded into the game; loaded via the @stringpay/sdk Checkout SDK.}
+    loader: "@stringpay/sdk"
+    docs: https://docs.string.xyz/docs/checkout-implementation-guide
+  unity:
+    description: String Unity — native Unity integration for embedding String payments directly in a Unity game.
+    components:
+    - {name: String Unity SDK, description: C# Unity package that renders the String payment flow inside the game engine.}
+    loader: String-xyz/unity-sdk
+    docs: https://docs.string.xyz/docs/unity-implementation-guide
+  direct:
+    description: String Direct — a custom web SDK for building a fully branded, immersive Web3 browser-game payment experience with CSS styling control.
+    components:
+    - {name: String Direct, description: Low-level web SDK surface for custom-rendered payment UX, with String Direct CSS styling.}
+    docs: https://docs.string.xyz/docs/direct-implementation-guide

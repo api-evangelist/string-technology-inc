@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.string.xyz
+description: >-
+  Cross-cutting standards conformance for the String API, derived from the
+  documented authentication model and endpoint surface. String does not publish
+  a compliance program (SOC 2 / ISO 27001 / PCI DSS) on its developer site, so
+  no Compliance pointer is emitted. As merchant of record, String presumably
+  handles card-data compliance internally, but nothing is published to assert
+  it, so it is recorded as unknown rather than claimed.
+standards:
+- id: eip-4361-siwe
+  conforms: true
+  evidence: Wallet-signature player login uses a RequestToSign nonce payload + signature verification (Sign-In With Ethereum challenge-response).
+- id: oauth2
+  conforms: false
+  evidence: No oauth2 security scheme; authentication is X-Api-Key + wallet signature.
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors are plain HTTP status codes; no application/problem+json documented.
+- id: rest-json
+  conforms: true
+  evidence: REST/JSON API over HTTPS at string-api.xyz.
+- id: pci-dss
+  conforms: unknown
+  evidence: String is the merchant of record for card payments; no PCI certification is published on the developer site.

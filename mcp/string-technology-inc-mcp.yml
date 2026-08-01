@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://docs.string.xyz/llms.txt
+description: >-
+  Candidate MCP server tool list DERIVED from String's documented API operations
+  (the ReadMe reference / llms.txt endpoint surface). String does not publish an
+  official hosted/remote MCP server; this is a starting point mapping the marquee
+  operations to MCP tools, not an authoritative provider manifest. Tools are
+  named from the documented endpoints; management/auth operations are omitted in
+  favor of the developer-facing quote/transact and read flows.
+server:
+  name: string
+  transport: http
+  url: null
+tools:
+- name: request_quote
+  description: Return the estimated cost of a transaction.
+  source_operation: post_quote
+- name: execute_transaction
+  description: Execute a transaction (fiat on/off ramp, NFT purchase, cross-chain).
+  source_operation: post_transaction
+- name: list_contracts
+  description: List a game's registered smart contracts.
+  source_operation: get_contracts
+- name: get_contract
+  description: Get a specific registered smart contract by ID.
+  source_operation: get_contracts-id
+- name: list_networks
+  description: List supported blockchain networks.
+  source_operation: get_networks
+- name: list_saved_cards
+  description: List a user's saved payment cards.
+  source_operation: get_cards
+- name: get_user_status
+  description: Get a user's (player's) status.
+  source_operation: get_users-id-status
+- name: list_platforms
+  description: List platforms (games) under the organization.
+  source_operation: get_platforms
+- name: list_api_keys
+  description: List the organization's API keys.
+  source_operation: get_apikeys

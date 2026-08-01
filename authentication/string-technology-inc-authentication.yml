@@ -1,0 +1,52 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.string.xyz/docs/basic-auth
+docs:
+- https://docs.string.xyz/docs/basic-auth
+- https://docs.string.xyz/docs/integrated-auth
+- https://docs.string.xyz/docs/getting-started
+description: >-
+  String uses two authentication layers: (1) API-key authentication for
+  server-to-server and game-to-API calls via an X-Api-Key header, with two key
+  classes — public keys (authenticate a game connecting to the String API) and
+  secret keys (manage an organization programmatically); and (2) Web3
+  wallet-signature login for players (an EIP-4361 / Sign-In-With-Ethereum style
+  challenge-response), where RequestToSign issues a nonce payload the player's
+  wallet signs, and the signed payload is verified to establish an
+  authenticated session with refreshable auth cookies/tokens. Derived by hand
+  from the docs because no machine-readable OpenAPI is publicly retrievable.
+summary:
+  types: [apiKey, walletSignature, session]
+  api_key_in: [header]
+  api_key_header: X-Api-Key
+schemes:
+- name: PublicApiKey
+  type: apiKey
+  in: header
+  parameter_name: X-Api-Key
+  key_class: public
+  usage: Authenticates a game/client connecting to the String API. Safe for game-side use.
+  source: https://docs.string.xyz/docs/getting-started
+- name: SecretApiKey
+  type: apiKey
+  in: header
+  parameter_name: X-Api-Key
+  key_class: secret
+  usage: Programmatic organization management. Must never be exposed in client-side code or public repos.
+  source: https://docs.string.xyz/docs/getting-started
+- name: WalletSignatureLogin
+  type: walletSignature
+  standard: EIP-4361 (Sign-In With Ethereum, challenge-response)
+  flow:
+    request_nonce: GET /login (RequestToSign) — returns a nonce payload for a given wallet address
+    sign_and_verify: POST /login/sign — submit the signed noncePayload; String verifies the signature to authenticate the player
+    refresh: POST /login/refresh — refresh the session token
+    logout: POST /login/logout — invalidate the auth cookies
+  source: https://docs.string.xyz/reference/get_login
+- name: MemberLogin
+  type: session
+  flow:
+    login: POST /login — email/password login for organization members (dashboard)
+    refresh: POST /login/refresh
+    logout: POST /login/logout
+  source: https://docs.string.xyz/reference/post_login

@@ -1,9 +1,32 @@
 aid: string-technology-inc
 name: String Technology Inc
-description: String Technology Inc is a company surfaced as a portfolio company of 500-global and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  String (string.xyz) is a fiat interoperability platform for Web3 gaming,
+  operated by String Technology Inc and backed by 500 Global. String lets game
+  developers accept credit-card and bank payments natively inside their games,
+  acting as the merchant of record and counterparty for fiat on/off ramps, NFT
+  purchases, and cross-chain payments. A player pays fiat on traditional rails
+  and String delivers the digital asset on-chain — either by interacting with
+  the game's smart contract to mint/send an NFT or by sending a token from its
+  treasury to the player's wallet. String ships three integration surfaces —
+  String Checkout (drop-in payment app), a Unity SDK, and String Direct (custom
+  web SDK) — all wrapping a REST API at string-api.xyz that covers API keys,
+  contracts, platforms (games), members, organizations, users (players), saved
+  cards, wallet-signature login, quotes, and transactions.
 url: https://raw.githubusercontent.com/api-evangelist/string-technology-inc/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/104804397?v=4
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,10 +35,53 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Payments
+- Web3
+- Gaming
+- Fiat On-Ramp
+- Cryptocurrency
+- NFT
+- Merchant of Record
+- Developer Tools
+apis:
+- name: String API
+  description: >-
+    REST API for String's fiat-for-Web3-gaming platform — quotes and
+    transactions (fiat on/off ramp, NFT purchase, cross-chain), plus management
+    of API keys, contracts, platforms (games), members, organizations, users
+    (players), saved cards, and wallet-signature authentication.
+  humanURL: https://docs.string.xyz
+  baseURL: https://string-api.xyz
+  tags:
+  - Payments
+  - Web3
+  - Gaming
+  properties:
+  - type: Documentation
+    url: https://docs.string.xyz
+  - type: APIReference
+    url: https://docs.string.xyz/reference/get_apikeys
+  - type: GettingStarted
+    url: https://docs.string.xyz/docs/getting-started
+  - type: LLMsTxt
+    url: llms/string-technology-inc-llms.txt
+  - type: Authentication
+    url: authentication/string-technology-inc-authentication.yml
+  - type: ErrorCatalog
+    url: errors/string-technology-inc-problem-types.yml
+  - type: Conventions
+    url: conventions/string-technology-inc-conventions.yml
+  - type: Conformance
+    url: conformance/string-technology-inc-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/string-technology-inc-lifecycle.yml
+  - type: DataModel
+    url: data-model/string-technology-inc-data-model.yml
+  - type: MCPServer
+    url: mcp/string-technology-inc-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +90,48 @@ maintainers:
 common:
 - type: Website
   url: https://string.xyz
+- type: DeveloperPortal
+  url: https://docs.string.xyz
+- type: Documentation
+  url: https://docs.string.xyz
+- type: APIReference
+  url: https://docs.string.xyz/reference/get_apikeys
+- type: GettingStarted
+  url: https://docs.string.xyz/docs/getting-started
+- type: GitHubOrganization
+  url: https://github.com/String-xyz
+- type: SignUp
+  url: https://sandbox.string.xyz/login
+- type: Sandbox
+  url: sandbox/string-technology-inc-sandbox.yml
+- type: LLMsTxt
+  url: llms/string-technology-inc-llms.txt
+- type: Packages
+  url: packages/string-technology-inc-packages.yml
+- type: SDKs
+  url: packages/string-technology-inc-packages.yml
+- type: Components
+  url: components/string-technology-inc-components.yml
+- type: Authentication
+  url: authentication/string-technology-inc-authentication.yml
+- type: ErrorCatalog
+  url: errors/string-technology-inc-problem-types.yml
+- type: Conventions
+  url: conventions/string-technology-inc-conventions.yml
+- type: Conformance
+  url: conformance/string-technology-inc-conformance.yml
+- type: Lifecycle
+  url: lifecycle/string-technology-inc-lifecycle.yml
+- type: DataModel
+  url: data-model/string-technology-inc-data-model.yml
+- type: MCPServer
+  url: mcp/string-technology-inc-mcp.yml
+- type: DomainSecurity
+  url: security/string-technology-inc-domain-security.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1

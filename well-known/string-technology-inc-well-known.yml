@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of String hosts
+description: >-
+  Probe results for String's /.well-known/ discovery surface across the docs,
+  sandbox, root, and API hosts. No discovery documents were served (all 404 or
+  unreachable), so no WellKnown/SecurityTxt pointer is wired. Recorded for
+  auditability; absence is valid data.
+hosts:
+- host: https://docs.string.xyz
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/apis.json, status: 404}
+- host: https://sandbox.string.xyz
+  documents:
+  - {path: /.well-known/security.txt, status: 0, note: unreachable}
+  - {path: /.well-known/openid-configuration, status: 0, note: unreachable}
+  - {path: /.well-known/oauth-authorization-server, status: 0, note: unreachable}
+- host: https://string.xyz
+  documents:
+  - {path: /.well-known/security.txt, status: 0, note: TLS/connection error}
+  - {path: /.well-known/ai-plugin.json, status: 0, note: TLS/connection error}

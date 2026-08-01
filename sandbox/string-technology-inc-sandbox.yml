@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.string.xyz/docs/getting-started
+description: >-
+  String's sandbox/test environment. Every organization gains access to the
+  sandbox on creation, where it can create API keys, register games and smart
+  contracts, and test the integration before upgrading to production. String
+  does not publish magic test card numbers or fixed test tokens in its public
+  docs, so none are recorded here (no fabrication) — the test surface is the
+  sandbox dashboard and sandbox-issued keys.
+environments:
+  test:
+    name: sandbox
+    dashboard: https://sandbox.string.xyz/login
+    description: Default environment on organization creation; sandbox-issued public/secret API keys.
+  live:
+    name: production
+    description: Requires an explicit upgrade from sandbox mode (via a request form).
+key_model:
+  public: Authenticates a game connecting to the String API (client-safe).
+  secret: Programmatic organization management; must not be shared publicly.
+test_values:
+  cards: []
+  note: No test card numbers, test wallets, or fixed hosted test tokens are published in the public documentation.
+docs:
+- https://docs.string.xyz/docs/getting-started

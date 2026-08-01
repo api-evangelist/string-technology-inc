@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.string.xyz/docs/our-products
+description: >-
+  First-party String (string.xyz) client libraries, verified against the public
+  npm registry (registry.npmjs.org) and the String-xyz GitHub organization. The
+  Checkout SDK is published to npm; the Unity SDK is distributed as a C# package
+  via the String-xyz/unity-sdk GitHub repository. Registry HTTP status recorded
+  at fetch time. Note: the unrelated npm package "string-sdk" belongs to a
+  different vendor (the "SmartLink / Context OS" platform) and is NOT included.
+packages:
+- language: javascript
+  registry: npm
+  name: "@stringpay/sdk"
+  url: https://www.npmjs.com/package/@stringpay/sdk
+  source: https://github.com/String-xyz/string-sdk
+  install: npm install @stringpay/sdk
+  description: String Checkout SDK — wraps the String payment flow (quote, transact, saved cards) into a drop-in browser integration.
+  official: true
+- language: csharp
+  registry: github
+  name: unity-sdk
+  url: https://github.com/String-xyz/unity-sdk
+  source: https://github.com/String-xyz/unity-sdk
+  install: "Add via Unity Package Manager (git URL: https://github.com/String-xyz/unity-sdk.git)"
+  license: MIT
+  description: String Unity SDK — C# integration for embedding String payments inside Unity games.
+  official: true
