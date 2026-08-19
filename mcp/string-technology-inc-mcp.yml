@@ -2,13 +2,11 @@ generated: '2026-07-21'
 method: derived
 status: candidate
 source: https://docs.string.xyz/llms.txt
-description: >-
-  Candidate MCP server tool list DERIVED from String's documented API operations
-  (the ReadMe reference / llms.txt endpoint surface). String does not publish an
-  official hosted/remote MCP server; this is a starting point mapping the marquee
-  operations to MCP tools, not an authoritative provider manifest. Tools are
-  named from the documented endpoints; management/auth operations are omitted in
-  favor of the developer-facing quote/transact and read flows.
+description: Candidate MCP server tool list DERIVED from String's documented API operations (the ReadMe
+  reference / llms.txt endpoint surface). String does not publish an official hosted/remote MCP server;
+  this is a starting point mapping the marquee operations to MCP tools, not an authoritative provider
+  manifest. Tools are named from the documented endpoints; management/auth operations are omitted in favor
+  of the developer-facing quote/transact and read flows.
 server:
   name: string
   transport: http
@@ -41,3 +39,9 @@ tools:
 - name: list_api_keys
   description: List the organization's API keys.
   source_operation: get_apikeys
+deployment:
+  mode: none
+  verified: derived
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
