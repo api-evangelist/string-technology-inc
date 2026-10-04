@@ -1,5 +1,5 @@
 aid: string-technology-inc
-name: String Technology Inc
+name: String Technology
 description: >-
   String (string.xyz) is a fiat interoperability platform for Web3 gaming,
   operated by String Technology Inc and backed by 500 Global. String lets game
@@ -150,3 +150,4 @@ x-enrichment:
   status: enriched
   artifacts_added: 15
   pass: local-v1
+x-legal-name: String Technology Inc
